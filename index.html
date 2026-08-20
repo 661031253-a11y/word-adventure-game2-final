@@ -597,6 +597,14 @@ function closePopup() {
 }
 
 </script>
+<audio id="bgMusic" src="sounds/sound2.mp3" loop preload="auto"></audio>
 
+<script>
+document.addEventListener("click", function startMusic() {
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.4;
+  music.play().catch(() => {});
+}, { once: true });
+</script>
 </body>
 </html>
